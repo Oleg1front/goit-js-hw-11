@@ -19,33 +19,85 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 img {
-  width: 100%;
+  max-width: 100%;
   display: block;
 }
-
 ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
-.gallery-list-item {
-  border: 1px solid black;
-  border-radius: 4px;
-  max-width: 320px;
-}
-
-.gallery-list-item-img {
-  width: 320px;
-  height: 200px;
-}
-
-.text-wrapper {
+.form {
   display: flex;
-  gap: 10px;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.form input {
+  padding: 8px 16px;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 4px;
+  width: 272px;
+  outline: none;
+  height: 40px;
+}
+.form button {
+  padding: 8px 16px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 4%;
+  text-align: left;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  padding: 36px;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-list-item {
+  border-radius: 4px;
+  max-width: 360px;
+  border: 1px solid rgb(128, 128, 128);
+  background: url(diego-ph-fIq0tET6llw-unsplash);
+}
+
+/* .gallery-list-item-img {
+  width: 360px;
+  height: 200px;
+} */
+
+.text-wrapper {
+  padding: 4px 20px;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  border-bottom: 1px solid rgb(128, 128, 128);
+  border-left: 1px solid rgb(128, 128, 128);
+  border-right: 1px solid rgb(128, 128, 128);
+  background: rgb(255, 255, 255);
 }
 
 .item-text-wrapper {
@@ -53,4 +105,22 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.gallery-list-item-text {
+  color: rgb(46, 47, 66);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 4%;
+  text-align: left;
+}
+.gallery-list-item-text-1 {
+  color: rgb(46, 47, 66);
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 4%;
+  text-align: left;
 }

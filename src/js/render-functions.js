@@ -4,7 +4,7 @@ function createGalleryMarkup(items) {
     .map(item => {
       return `<li class="gallery-list-item">
         <a class="gallery-link" href="${item.largeImageURL}">
-            <img src="${item.webformatURL}" alt="${item.tags}" class="gallery-list-item-img"/>        
+            <img class="gallery-list-item-img" src="${item.webformatURL}" alt="${item.tags}" />        
         </a>
             <div class="text-wrapper">
                 <div class="item-text-wrapper">

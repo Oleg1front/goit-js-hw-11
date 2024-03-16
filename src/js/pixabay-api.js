@@ -5,6 +5,9 @@ function fetchImg(searchInput) {
   const apiKey = '42869495-3eaffa1d7f59c13a6a9af4ac7';
   const searchWord = searchInput.value;
   const url = `https://pixabay.com/api/?key=${apiKey}&q=${searchWord}&orientation=horizontal&safesearch=true`;
+  if (searchWord === "") {
+    return
+  }
 
   return fetch(url)
     .then(response => {
@@ -22,3 +25,4 @@ function fetchImg(searchInput) {
 }
 
 export default fetchImg;
+

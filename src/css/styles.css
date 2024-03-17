@@ -37,6 +37,9 @@ ul {
   flex-wrap: wrap;
   gap: 24px;
 }
+a {
+  text-decoration: none;
+}
 .form {
   display: flex;
   justify-content: center;
@@ -123,4 +126,43 @@ ul {
   line-height: 16px;
   letter-spacing: 4%;
   text-align: left;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #ff3d00 transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.is-open {
+  display: block;
 }
